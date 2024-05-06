@@ -17,3 +17,5 @@ SELECT * from eleves;
 
 --Avec le commit on enregistre dans notre base de donné la nouvelle ligne ajouté 
 
+-- On change de connexion et on fais :
+SELECT * from eleves;
