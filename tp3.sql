@@ -17,5 +17,12 @@ SELECT * from eleves;
 
 --Avec le commit on enregistre dans notre base de donné la nouvelle ligne ajouté 
 
+-- On insere et on change de connexion 
+START TRANSACTION;
+INSERT INTO eleves (NUM_ELEVE,NOM,PRENOM,DATE_NAISSANCE,POIDS,ANNEE,GENRE) VALUES (11,"eleve","1",'2000-5-18',79,2,"M");
+SELECT * from eleves;
+SELECT * from eleves;
 -- On change de connexion et on fais :
 SELECT * from eleves;
+
+--Et notre nouvel element n'apparait pas
