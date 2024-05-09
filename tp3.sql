@@ -57,3 +57,18 @@ COMMIT;
 SELECT COUNT(*) AS TotalEleves FROM ELEVES;
 
 
+-- Modifier le niveau d'isolation 
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+
+-- Experience sur le niveau d'isolation modifié
+
+--Premiere connexion 
+START TRANSACTION;
+SELECT * FROM ELEVES WHERE NUM_ELEVE = 1;
+
+-- Deuxieme connexion 
+START TRANSACTION;
+UPDATE ELEVES SET ANNEE = 3 WHERE NUM_ELEVE = 1;
+
+-- Verification dans la premiere connexion 
+SELECT * FROM ELEVES WHERE NUM_ELEVE = 1;
